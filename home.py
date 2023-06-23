@@ -25,11 +25,11 @@ option = st.selectbox(
     '¿En cuál temática deseas que te apoyemos?',
     ('Familia', 'Procesal', 'Contractual'))
 
-st.write('Te apoyaremos en tu consulta en', option)
-
+if option:
+    st.write('Te apoyaremos en tu consulta en', option)
 
 option1 = st.selectbox(
     '¿Cuál acompañamiento te queda mejor?',
     ('Asistentes Virtuales 🤖 desde $15.000 consulta', '👩‍⚖️ Abogados Especialistas🧑🏽‍⚖️ desde $100.000 consulta'))
-
-st.write('Elegiste', option1)
+if option1:
+    st.write('Elegiste', option1)
