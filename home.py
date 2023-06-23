@@ -22,7 +22,7 @@ st.title('Novus Legal ⚖️')
 st.header("Tecnología Jurídica Para tu Asesoría y Defensa")
 
 option = st.selectbox(
-    '¿En cuál temática deseas que te apoyemos?',
+    '¿En cuál temática deseas te apoyemos?',
     ('Familia', 'Procesal', 'Contractual'))
 
 if option:
