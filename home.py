@@ -24,4 +24,4 @@ st.write("Tenemos Asistentes Virtuales 🤖 Expertos en Temáticas Jurídicas y 
 
 st.write("Define tu consulta:")
 
-tab1, tab2, tab3, tab4 = st.tabs(["Familia", "Suceciones", "Impugnaciones de Paternidad o Maternindad", "Procesal"])
+tab1, tab2, tab3, tab4 = st.tabs(["Familia", "Suceciones", "Impugnaciones de Paternidad o Maternindad", "Procesal", "Contractual", "Alimentos", "Ejecutivos", "Fijación, Aumento, Disminución o Exoneración de Cuotas Alimentarios"])
