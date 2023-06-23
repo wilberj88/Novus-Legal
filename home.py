@@ -20,7 +20,7 @@ st.set_page_config(layout="wide", page_title="Novus Legal ⚖️", page_icon="�
 st.title('Novus Legal ⚖️')
 
 st.header("Consultas Jurídicas 🔍 y Defensa de Derechos Vulnerados 👊")
-st.write("Tenemos Asistentes Virtuales 🤖 Expertos en Temáticas Jurídicas y 👩‍⚖️ Doctores Especializados🧑🏽‍⚖️ para atención y acompañamiento humano")
+st.write("Tenemos Asistentes Virtuales 🤖 Expertos en Temáticas Jurídicas y 👩‍⚖️ Abogados Especialistas🧑🏽‍⚖️ para atención y acompañamiento humano")
 
 st.write("Define tu consulta:")
 
