@@ -19,9 +19,17 @@ st.set_page_config(layout="wide", page_title="Novus Legal ⚖️", page_icon="�
 
 st.title('Novus Legal ⚖️')
 
-st.header("Consultas Jurídicas 🔍 y Defensa de Derechos Vulnerados 👊")
-st.write("Tenemos Asistentes Virtuales 🤖 Expertos en Temáticas Jurídicas y 👩‍⚖️ Abogados Especialistas🧑🏽‍⚖️ para atención y acompañamiento humano")
+st.header("Tecnología Jurídica Para tu Asesoría y Defensa")
 
-st.write("Define tu consulta:")
+option = st.selectbox(
+    '¿En cuál temática deseas que te apoyemos?',
+    ('Familia', 'Procesal', 'Contractual'))
 
-tab1, tab2, tab3, tab4 = st.tabs(["Familia", "Suceciones", "Impugnaciones de Paternidad o Maternindad", "Procesal", "Contractual", "Alimentos", "Ejecutivos", "Cuotas Alimentarias"])
+st.write('Te apoyaremos en tu consulta en', option)
+
+
+option1 = st.selectbox(
+    '¿Cuál acompañamiento te queda mejor?',
+    ('Asistentes Virtuales 🤖 desde $15.000 consulta', '👩‍⚖️ Abogados Especialistas🧑🏽‍⚖️ desde $100.000 consulta'))
+
+st.write('Elegiste', option1)
