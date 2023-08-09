@@ -25,7 +25,7 @@ with col1:
     )
     categoria = st.radio(
         "Tipo de uso de tu terreno",
-        options=['Gasolinera', 'Restaurante','Hotel', 'Montallantas', 'Casa', 'Rastrojo'],
+        options=['Gasolinera', 'Restaurante','Hotel', 'Montallantas', 'Casa', 'Mejoras Vivienda', 'Rastrojo'],
     )
 
 with col2:
