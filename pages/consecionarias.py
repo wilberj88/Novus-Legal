@@ -20,7 +20,7 @@ col1, col2 = st.columns(2)
 
 with col1:
     territorio = st.selectbox(
-        "Indica el tramo donde se encuentra tu terreno adjunto a la vía Panamericana",
+        "Indica el tramo donde se encuentra tu terreno adyacente o sobre la vía Panamericana",
         ("Km0-Km50", "Km50-Km120", "Km120-Km200", "Km200-Km300", "Km300-Km500"),
     )
     categoria = st.radio(
