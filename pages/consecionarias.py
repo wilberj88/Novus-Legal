@@ -1,4 +1,4 @@
-import streamlit as st
+pimport streamlit as st
 
 st.set_page_config(layout="wide", page_title="Novus Legal ⚖️", page_icon="⚖️")
 
@@ -52,5 +52,5 @@ d = st.slider('¿Años de propiedad del predio?', 0, 24)
 h = st.button('Enviar solicitud de defensa a Novus Legal ⚖️')
 
 if h:
-    st.write('¡Solicitud enviada! En breve te compartiremos a ', correo, 'tu plan personalizado con atención de blindaje del predio con matrícula ', matricula,' durante las horarios de <<', b, '>>')
+    st.write('¡Solicitud enviada! En breve te compartiremos a ', correo, 'tu plan personalizado de protección de su ', uso,' con atención de blindaje del predio con matrícula ', matricula,' durante las horarios de <<', b, '>>')
 
