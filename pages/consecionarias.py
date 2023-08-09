@@ -37,7 +37,7 @@ with col2:
     ''')
     otroscandidatos =  st.text_input('Ingrese número de cédula de propietario o NIT de operador', '''
     ''')
-    catastral =  st.text_input('Ingrese número catastral', '''
+    catastral =  st.text_input('Ingrese el número predial:', '''
     ''')
 
 a = st.selectbox('Elige cuál derecho quisieras priorizar en tu defensa:', ['Facturación comercial diaria', 'Ubicación del negocio', 'Daños Ecosistémicos', 'Daño de Cultivos', 'Daños a la Construcción'])
