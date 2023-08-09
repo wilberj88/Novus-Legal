@@ -25,7 +25,7 @@ with col1:
     )
     uso = st.radio(
         "Tipo de uso de tu terreno",
-        options=['Gasolinera', 'Restaurante','Hotel', 'Montallantas', 'Casa', 'Mejoras_Vivienda', 'Rastrojo'],
+        options=['Gasolinera', 'Restaurante','Hotel', 'Montallantas', 'Tienda', 'Casa', 'Mejoras_Vivienda', 'Rastrojo'],
     )
     antiguedad = st.selectbox(
         "Antiguedad de la contabiliad del negocio",
