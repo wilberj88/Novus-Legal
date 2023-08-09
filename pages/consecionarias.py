@@ -46,5 +46,6 @@ h = st.slider('Años de propiedad del predio?', 0, 24)
 
 i = st.button('Enviar solicitud de defensa a Novus Legal ⚖️')
 
-st.write('¡Solicitud enviada! En breve te compartiremos un plan personalizado de ', h,' horas semanales, mediante ejemplos asociados a <<', c, '>> para que aprendas <<', a, '>> y logres aportar a salvar al planeta en <<', b, '>>.')
+if i:
+    st.write('¡Solicitud enviada! En breve te compartiremos un plan personalizado de ', h,' horas semanales, mediante ejemplos asociados a <<', c, '>> para que aprendas <<', a, '>> y logres aportar a salvar al planeta en <<', b, '>>.')
 
