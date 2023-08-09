@@ -19,4 +19,4 @@ st.set_page_config(layout="wide", page_title="Novus Legal ⚖️", page_icon="�
 
 st.title('Novus Legal ⚖️')
 
-st.header("Plan de Defensa Jurídica ante Consecionarios Viales 🚧")
+st.header("Defensa Jurídica ante Consecionarios Viales 🚧")
