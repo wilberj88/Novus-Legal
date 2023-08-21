@@ -7,3 +7,6 @@ Automate Document Extraction (Contracts, claims, declarations, endorsements): ht
 
 Smart Contracts by NEAR (Carbon Neutro):
 https://platzi.com/clases/3238-near/50812-un-vistazo-al-near-explorer/
+
+Stack:
+1) Rust - Near - Python
