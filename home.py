@@ -11,11 +11,10 @@ from streamlit_gsheets import GSheetsConnection
 st.set_page_config(layout="wide", page_title="Novus Legal ⚖️", page_icon="⚖️")
 
 #ConnectGoogleSheet
-url = "https://docs.google.com/spreadsheets/d/10NIPfRhrDpHMry-d-qjLC_IEdyFvc8hooZdPbOxq-dw/edit?usp=sharing"
 
 conn = st.connection("gsheets", type=GSheetsConnection)
 
-data = conn.read(spreadsheet=url, worksheet="Hoja 1")
+data = conn.read(worksheet="Hoja 1")
 
 
 
