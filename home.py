@@ -56,7 +56,6 @@ if tematica and servicio:
             '¿Cómo prefieres la respuesta a tu consulta?', 
             options=RESPUESTAS, 
             index=None)
-        )
         
         submit_button = st.form_submit_button(label="Cargar Consulta")
         
