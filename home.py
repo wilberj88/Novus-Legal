@@ -1,14 +1,9 @@
 import streamlit as st
-from streamlit_echarts import st_echarts
-from streamlit_echarts import st_pyecharts
-from streamlit_timeline import st_timeline
-import plotly.express as px
 import pandas as pd
 import numpy as np
 import datetime
 import base64
-from pyecharts import options as opts
-from pyecharts.charts import Graph
+import streamlit.components.v1 as com
 
 
 st.set_page_config(layout="wide", page_title="Novus Legal ⚖️", page_icon="⚖️")
@@ -46,49 +41,34 @@ servicio = st.selectbox(
 if tematica and servicio:
     st.write('Te apoyaremos en tu consulta en', tematica)
     st.write('Para el servicio de ', servicio)
-    st.subheader('Por favor diligencia el formulario para preparar tu consulta ⚖️')
+    st.subheader('Por favor diligencia el formulario para preparar la respuesta a tu consulta ⚖️')
     with st.form(key="user_form"):
-        user_name = st.text_input(label="User Name*")
-        user_email = st.text_input(label="User Email*")
-        user_love = st.text_area(label="¿Qué te divierte? No te aburrirías de hacerlo casi todos los días")
-        user_good = st.text_area(label="¿Para qué eres bueno? Agrega link de Linkedin del Rol al que aspiras")
-        user_paid = st.multiselect("Por qué te pagarían", options=PAIDS)
-        user_world_needs = st.selectbox("ODS que te mueve*", options=ODS, index=None)
+        user_name = st.text_input(label="Nombre y Apellido*")
+        user_email = st.text_input(label="Correo*")
+        user_consult = st.text_area(label="¿Cuál es tu consulta? Por favor enlista todas tus preguntas")
         
-        
-        # Mark mandatory fields
-        st.markdown("**required*")
-        
-        submit_button = st.form_submit_button(label="Submit New User Details")
+        submit_button = st.form_submit_button(label="Cargar Consulta")
         
         # If the submit button is pressed
         if submit_button:
             # Check if all mandatory fields are filled
-            if not user_name or not user_email:
-                st.warning("Ensure all mandatory fields are filled.")
-                st.stop()
-            elif existing_data["User_Name"].str.contains(user_name).any():
-                st.warning("A user with this name already exists.")
+            if not user_name or not user_email or not user_consult:
+                st.warning("Diligencia todos los espacios")
                 st.stop()
             else:
-                # Create a new row of vendor data
+                # Create a new row of user data
                 new_user_data = pd.DataFrame(
                     [
                         {
                             "User_Name": user_name,
                             "User_Email": user_email,
-                            "User_Love": user_love,
-                            "User_Good": user_good,
-                            "User_Paid": user_paid,
-                            "User_World_Needs": user_world_needs,
+                            "User_Love": user_consult,
                         }
                     ]
                 )
-        
-                # Add the new vendor data to the existing data
-                updated_df = pd.concat([existing_data, new_user_data], ignore_index=True)
-        
-                # Update Google Sheets with the new vendor data
-                conn.update(worksheet="Users", data=updated_df)
-        
-                st.success("User details successfully submitted! Bienvenido a MandIki")
+                st.dataframe(new_user_data)
+                st.success("Formulario cargado")
+                st.subheader("Paga tu consulta y recibe respuesta en menos de 24h") 
+                com.html("""
+                <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Pagar Consulta', '#29abe0', 'Q5Q8S0K6H');kofiwidget2.draw();</script> 
+                """)
