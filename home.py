@@ -39,7 +39,7 @@ tematica = st.selectbox(
 servicio = st.selectbox(
     '¿Cuál acompañamiento jurídico te queda mejor?', options=SERVICIOS)
 
-if tematica & servicio:
+if tematica and servicio:
     st.write('Te apoyaremos en tu consulta en', tematica)
     st.write('Para el servicio de ', servicio)
     st.subheader('Por favor diligencia el formulario para preparar tu consulta ⚖️')
