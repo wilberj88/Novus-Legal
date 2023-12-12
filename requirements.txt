@@ -12,3 +12,4 @@ raceplotly
 streamlit_agraph
 graphviz
 openai
+streamlit_gsheets
