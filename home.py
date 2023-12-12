@@ -53,7 +53,7 @@ if tematica and servicio:
         if submit_button:
             # Check if all mandatory fields are filled
             if not user_name or not user_email or not user_consult:
-                st.warning("Diligencia todos los espacios")
+                st.warning("Diligencia todos los espacios por favor")
                 st.stop()
             else:
                 # Create a new row of user data
