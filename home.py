@@ -25,6 +25,12 @@ SERVICIOS = [
     "Consulta Jurídica - Abogado Especialista - Desde 100.000$"
 ]
 
+RESPUESTAS = [
+    "Videollamada",
+    "Correo Electrónico con respuesta en texto",
+    "Audio explicativo"
+]
+
 tematica = st.selectbox(
     '¿En cuál temática jurídica necesitas que te apoyemos?', 
     options=TEMATICAS_JURIDICAS, 
@@ -44,8 +50,13 @@ if tematica and servicio:
     st.subheader('Por favor diligencia el formulario para preparar la respuesta a tu consulta ⚖️')
     with st.form(key="user_form"):
         user_name = st.text_input(label="Nombre y Apellido*")
-        user_email = st.text_input(label="Correo*")
+        user_email = st.text_input(label="Correo")
         user_consult = st.text_area(label="¿Cuál es tu consulta? Por favor enlista todas tus preguntas")
+        user_respuesta = st.selectbox(
+            '¿Cómo prefieres la respuesta a tu consulta?', 
+            options=RESPUESTAS, 
+            index=None)
+        )
         
         submit_button = st.form_submit_button(label="Cargar Consulta")
         
@@ -60,9 +71,9 @@ if tematica and servicio:
                 new_user_data = pd.DataFrame(
                     [
                         {
-                            "User_Name": user_name,
-                            "User_Email": user_email,
-                            "User_Love": user_consult,
+                            "User_Nombre": user_name,
+                            "User_Correo": user_email,
+                            "User_Consulta": user_consult,
                         }
                     ]
                 )
