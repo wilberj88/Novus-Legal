@@ -14,8 +14,9 @@ st.set_page_config(layout="wide", page_title="Novus Legal ⚖️", page_icon="�
 
 conn = st.connection("gsheets", type=GSheetsConnection)
 
-data = conn.read(worksheet="Hoja 1")
-
+data = conn.read(worksheet="Solicitudes")
+data = data.dropna(how="all")
+existing_data = data
 
 
 st.title('Novus Legal ⚖️ & Corpojurídicos')
@@ -94,7 +95,8 @@ if tematica and servicio:
                     ]
                 )
                 st.dataframe(new_user_data)
-                conn.create(worksheet="Solicitudes", data=new_user_data)
+                updated_df = pd.concat([existing_data, new_user_data], ignore_index=True)
+                conn.update(worksheet="Solicitudes", data=updated_df)
                 st.success("Formulario cargado")
                 st.subheader("Paga tu consulta y recibe respuesta en menos de 24h") 
                 com.html("""
