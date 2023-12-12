@@ -15,7 +15,9 @@ st.header("Tecnología Jurídica Para tu Asesoría y Defensa")
 TEMATICAS_JURIDICAS = [
     "Familia - Sucesiones",
     "Familia - Divorcios",
-    "Procesal",
+    "Procesal - Civil",
+    "Procesal - Comercial",
+    "Procesal - Penal",
     "Contractual - Contratos de Trabajo",
     "Contractual - Contratos de Obra",
     "Contractual - Contratos de Prestación de Servicios",
