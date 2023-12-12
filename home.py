@@ -4,9 +4,20 @@ import numpy as np
 import datetime
 import base64
 import streamlit.components.v1 as com
+from streamlit_gsheets import GSheetsConnection
+
 
 
 st.set_page_config(layout="wide", page_title="Novus Legal ⚖️", page_icon="⚖️")
+
+#ConnectGoogleSheet
+url = "https://docs.google.com/spreadsheets/d/10NIPfRhrDpHMry-d-qjLC_IEdyFvc8hooZdPbOxq-dw/edit?usp=sharing"
+
+conn = st.connection("gsheets", type=GSheetsConnection)
+
+data = conn.read(spreadsheet=url, worksheet="Hoja 1")
+
+
 
 st.title('Novus Legal ⚖️ & Corpojurídicos')
 
@@ -78,10 +89,13 @@ if tematica and servicio:
                             "User_Nombre": user_name,
                             "User_Correo": user_email,
                             "User_Consulta": user_consult,
+                            "User_Tematica": tematica,
+                            "User_Servicio": servicio,
                         }
                     ]
                 )
                 st.dataframe(new_user_data)
+                conn.create(worksheet="Solicitudes", data=new_user_data)
                 st.success("Formulario cargado")
                 st.subheader("Paga tu consulta y recibe respuesta en menos de 24h") 
                 com.html("""
