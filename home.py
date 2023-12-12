@@ -39,7 +39,7 @@ if tematica:
 
 servicio = st.selectbox(
     '¿Cuál acompañamiento jurídico te queda mejor?', options=SERVICIOS)
-if option1:
+if servicio:
     st.write('Elegiste', option1)
 
 
