@@ -16,7 +16,10 @@ TEMATICAS_JURIDICAS = [
     "Familia - Sucesiones",
     "Familia - Divorcios",
     "Procesal",
-    "Contractual",
+    "Contractual - Contratos de Trabajo",
+    "Contractual - Contratos de Obra",
+    "Contractual - Contratos de Prestación de Servicios",
+    "Contractual - Contratos de Arriendo",
     "Otra",
 ]
 
