@@ -8,3 +8,10 @@ st.header("Consulta el estado de tu proceso jurídico 🔎")
 col1, col2 = st.columns(2)
 
 with col1:
+    nombre = st.text_input('Ingrese el nombre del cliente de Novus Legal:', '''
+    ''')
+
+with col2:
+    cedula =  st.text_input('Ingrese el número de cédula:', '''
+    ''')
+
