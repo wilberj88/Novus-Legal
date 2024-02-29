@@ -15,3 +15,8 @@ with col2:
     cedula =  st.text_input('Ingrese el número de cédula:', '''
     ''')
 
+
+h = st.button('Revisar mi Caso en vivo con Novus Legal ⚖️')
+
+if h:
+    st.write('¡Cargando tu caso <<', nombre, '>>! En breve te compartiremos tu portal de monitoreo número<<', cedula, '>>')
