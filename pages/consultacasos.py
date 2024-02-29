@@ -5,3 +5,6 @@ st.title('Novus Legal ⚖️')
 
 st.header("Consulta el estado de tu proceso jurídico 🔎")
 
+col1, col2 = st.columns(2)
+
+with col1:
