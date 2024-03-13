@@ -22,11 +22,11 @@ col1.subheader("Código Catastral")
 col1.write("680810002000000040125000000000COD")
 
 with col2:
-  m = folium.Map(location=[6.9115957, -73.7144061], zoom_start=15)
+  m = folium.Map(location=[6.9115957, -73.7144061], zoom_start=14)
   folium.Marker(
     [6.9115957, -73.7144061], popup="Predio El Porvenir", tooltip="Predio El Porvenir", icon=folium.Icon(icon='cloud')
     ).add_to(m)
-  st_data = st_folium(m, width=400, height=600)
+  st_data = st_folium(m, width=400, height=500)
 
 with col3:
   st.subheader ("Etapas de legalización")
