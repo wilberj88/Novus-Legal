@@ -10,13 +10,15 @@ st.header("Experiente jurídico 🔎 #001-SAN-COL-2024")
 
 
 col1, col2 = st.columns(2)
-col1.subheader("Propietarios:")
+col1.subheader("Propietarios")
 col1.write("Isbelia Hernández, Wilber Jiménez Viloria y Wilber Jiménez Hernández")
 col1.subheader("Área")
 col1.write("42 hectáreas")
-col1.subheader("Número de Matrícula Inmobiliario:")
+col1.subheader("Resolución de Adjudicación")
+col1.write("RESOLUCION 651 del 15-02-1967 INCORA de BUCARAMANGA")
+col1.subheader("Número de Matrícula Inmobiliario")
 col1.write("303-61779")
-col1.subheader("Código Catastral:")
+col1.subheader("Código Catastral")
 col1.write("680810002000000040125000000000COD")
 
 with col2:
