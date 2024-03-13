@@ -20,6 +20,8 @@ with col2:
   folium.Marker(
     [6.9115957, -73.7144061], popup="Predio El Porvenir", tooltip="Predio El Porvenir", icon=folium.Icon(icon='cloud')
     ).add_to(m)
+  st_data = st_folium(m, width=500)
+
 
 
 st.subheader ("Etapas de legalización")
