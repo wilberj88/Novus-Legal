@@ -31,3 +31,13 @@ with col2:
 
 with col3:
   st.subheader ("Etapas de legalización")
+  st.subheader ("1. Recolección de Información")
+  st.subheader ("2. Levantamiento Topográfico + Documentación")
+  st.subheader ("3. Solicitud de Legalización ante ANT + ORIP")
+  st.subheader ("4. Aceptación de Planos")
+  st.subheader ("5. Resolución y Título")
+  st.subheader ("6. Escrituración")
+  
+  
+  
+  
