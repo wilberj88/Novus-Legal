@@ -15,7 +15,9 @@ col1.write("Isbelia Hernández, Wilber Jiménez Viloria y Wilber Jiménez Herná
 col1.subheader("Área")
 col1.write("42 hectáreas")
 col1.subheader("Número de Matrícula Inmobiliario:")
-col1.subheader("Número Predial:")
+col1.write("303-61779")
+col1.subheader("Código Catastral:")
+col1.write("680810002000000040125000000000COD")
 
 with col2:
   m = folium.Map(location=[6.9115957, -73.7144061], zoom_start=13)
