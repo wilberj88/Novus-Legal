@@ -13,3 +13,5 @@ streamlit_agraph
 graphviz
 openai
 st-gsheets-connection
+folium
+streamlit_folium
