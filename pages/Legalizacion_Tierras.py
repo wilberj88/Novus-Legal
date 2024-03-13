@@ -9,7 +9,7 @@ st.title('Novus Legal ⚖️ Legalización de Tierras 🗺️')
 st.header("Experiente jurídico 🔎 #001-SAN-COL-2024")
 
 
-col1, col2 = st.columns(2)
+col1, col2, col3 = st.columns(3)
 col1.subheader("Propietarios")
 col1.write("Isbelia Hernández, Wilber Jiménez Viloria y Wilber Jiménez Hernández")
 col1.subheader("Área")
@@ -28,6 +28,5 @@ with col2:
     ).add_to(m)
   st_data = st_folium(m, width=400)
 
-
-
-st.subheader ("Etapas de legalización")
+with col3:
+  st.subheader ("Etapas de legalización")
