@@ -15,6 +15,11 @@ col1.write("Área: 42 hectáreas")
 col1.write("Número de Matrícula Inmobiliario: _______")
 col1.write("Número Predial: ______")
 
+with col2:
+  m = folium.Map(location=[6.9115957, -73.7144061], zoom_start=13)
+  folium.Marker(
+    [6.9115957, -73.7144061], popup="Predio El Porvenir", tooltip="Predio El Porvenir", icon=folium.Icon(icon='cloud')
+    ).add_to(m)
 
 
 st.subheader ("Etapas de legalización")
