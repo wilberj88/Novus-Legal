@@ -10,10 +10,12 @@ st.header("Experiente jurídico 🔎 #001-SAN-COL-2024")
 
 
 col1, col2 = st.columns(2)
-col1.write("Propietarios: Isbelia Hernández, Wilber Jiménez Viloria y Wilber Jiménez Hernández")
-col1.write("Área: 42 hectáreas")
-col1.write("Número de Matrícula Inmobiliario: _______")
-col1.write("Número Predial: ______")
+col1.subheader("Propietarios:")
+col1.write("Isbelia Hernández, Wilber Jiménez Viloria y Wilber Jiménez Hernández")
+col1.subheader("Área")
+col1.write("42 hectáreas")
+col1.subheader("Número de Matrícula Inmobiliario:")
+col1.subheader("Número Predial:")
 
 with col2:
   m = folium.Map(location=[6.9115957, -73.7144061], zoom_start=13)
